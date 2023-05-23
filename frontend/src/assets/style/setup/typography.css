@@ -1,0 +1,14 @@
+@font-face {
+    font-family: CarterOne;
+    src: url("../../font/CarterOne/CarterOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: Signika;
+    src: url("../../font/Signika/Signika-Regular.ttf")
+}
+
+@font-face {
+    font-family: NotoSans;
+    src: url("../../font/NotoSans/NotoSans-Regular.ttf")
+}

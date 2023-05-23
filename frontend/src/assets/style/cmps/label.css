@@ -1,0 +1,64 @@
+.label {
+    padding: 0.5em;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    width: max-content;
+    white-space: nowrap;
+    margin: 0.2em;
+}
+
+.label.inactive-label {
+    background-color: var(--inactive);
+}
+
+.on-wheels {
+    background-color:  #FF9C71;
+}
+
+.box-game {
+    background-color: #7B88FF;
+}
+
+.art {
+    background-color: #E7A4E4;
+
+}
+
+.baby {
+    background-color: #A5AEFF;
+}
+
+.doll {
+    background-color: #FFC75F;
+}
+
+.puzzle {
+    background-color: #E7305B;
+}
+
+.outdoor {
+    background-color: #75CFB8;
+}
+
+.battery-powered {
+    background-color: #FF75A0;
+}
+
+.label-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: space-evenly;
+    align-items: space-evenly;
+    margin-block: 1em;
+    width: 70vh;
+}
+
+.toy-edit .label {
+    cursor: pointer;
+}
+
+.toy-edit .label:hover {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}

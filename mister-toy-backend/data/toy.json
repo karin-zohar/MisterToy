@@ -1,0 +1,14 @@
+[
+  {
+    "_id": "t101",
+    "name": "Not Talking Doll",
+    "price": 1230,
+    "labels": [
+      "Doll",
+      "Baby",
+      "Box game"
+    ],
+    "createdAt": 1631031801011,
+    "inStock": true
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7c6d6e41.css",
+    "main.js": "/static/js/main.329a781f.js",
+    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
+    "static/media/NotoSans-Regular.ttf": "/static/media/NotoSans-Regular.8b5fb1085ae46bea8ae1.ttf",
+    "static/media/Signika-Regular.ttf": "/static/media/Signika-Regular.cd8e69e2888d50b27b39.ttf",
+    "static/media/CarterOne-Regular.ttf": "/static/media/CarterOne-Regular.e265365315443b6eca5a.ttf",
+    "index.html": "/index.html",
+    "main.7c6d6e41.css.map": "/static/css/main.7c6d6e41.css.map",
+    "main.329a781f.js.map": "/static/js/main.329a781f.js.map",
+    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7c6d6e41.css",
+    "static/js/main.329a781f.js"
+  ]
+}
