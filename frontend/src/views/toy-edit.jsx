@@ -83,8 +83,8 @@ export function ToyEdit() {
         return `label ${isActive} ${labelType}`
     }
 
-    const { name, price, inStock } = updatedToy
-    console.log('inStock: ', inStock)
+    const { name, price, inStock, imgUrl } = updatedToy
+
     return (
         <section className="toy-edit">
             <h2>{toyToEdit._id ? 'Edit this toy' : 'Add a new toy'}</h2>
@@ -118,6 +118,16 @@ export function ToyEdit() {
                     // value={inStock}
                     checked={inStock}
                     onChange={handleChange}
+                />
+
+                <label htmlFor="imgUrl">Image URL:</label>
+                <input 
+                type="text"
+                id="imgUrl"
+                name="imgUrl"
+                placeholder="Paste a link to the product image here"
+                value={imgUrl}
+                onChange={handleChange}
                 />
 
                 <div className="label-container">

@@ -4,6 +4,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom'
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
 import { utilService } from "../services/util.service"
 import { toyService } from "../services/toy.service"
+import defaultImg from '../assets/img/default-img.png'
 
 export function ToyDetails() {
     const [toy, setToy] = useState(null)
@@ -34,7 +35,11 @@ export function ToyDetails() {
 
     if (!toy) return <div>Loading...</div>
     const price = utilService.padNum(toy.price)
+    const toyImg = (toy.imgUrl) ? toy.imgUrl : defaultImg
     return <section className="toy-details">
+        <div className="img-wrapper">
+            <img src={toyImg} alt="toy" />
+        </div>
         <h1>{toy.name}</h1>
         <p>${price}</p>
         <p>{(toy.inStock) ? 'Available' : 'Out of stock'}</p>

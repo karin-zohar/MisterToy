@@ -3,11 +3,14 @@ import { useEffect, useState } from 'react'
 
 import { toyService } from '../services/toy.service'
 import { utilService } from '../services/util.service'
+import { labelService } from '../services/label.sevice'
 
 export function ToyFilter({ onSetFilter, onSetSort }) {
     const [filterByToEdit, setFilterByToEdit] = useState(toyService.getDefaultFilter())
     const [sortByToEdit, setSortByToEdit] = useState(toyService.getDefaultSort())
     const [maxPrice, setMaxPrice] = useState(500)
+    const [labels, setLabels] = useState([])
+
     const formattedPrice = utilService.padNum(maxPrice)
 
     useEffect(() => {
@@ -19,6 +22,11 @@ export function ToyFilter({ onSetFilter, onSetSort }) {
         onSetSort(sortByToEdit)
 
     }, [sortByToEdit])
+
+    useEffect(() => {
+        labelService.query()
+            .then(setLabels(labels))
+    }, [])
 
     function handleFilterChange({ target }) {
         let { value, name: field, type } = target
@@ -70,7 +78,7 @@ export function ToyFilter({ onSetFilter, onSetSort }) {
                     id="price"
                     name="price"
                     min="0"
-                    max="1000"
+                    max="2000"
                     onChange={(event) => {
                         handleFilterChange(event)
                         setRangeLabel(event)
@@ -82,9 +90,7 @@ export function ToyFilter({ onSetFilter, onSetSort }) {
                     type="checkbox"
                     name="inStock"
                     onChange={handleFilterChange}
-                    />
-
-
+                />
 
             </section>
 

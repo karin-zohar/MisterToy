@@ -64,14 +64,15 @@ app.get('/api/toy', (req, res) => {
 // Add
 app.post('/api/toy', (req, res) => {
 
-    const { name, inStock, price, labels } = req.body
+    const { name, inStock, price, labels, imgUrl } = req.body
 
     const toy = {
         name,
         price: +price,
         inStock,
         labels,
-        createdAt: Date.now()
+        createdAt: Date.now(),
+        imgUrl
     }
     toyService.save(toy)
         .then((savedToy) => {
@@ -86,15 +87,16 @@ app.post('/api/toy', (req, res) => {
 
 // Edit
 app.put('/api/toy', (req, res) => {
-
-    const { name, price, _id, inStock, labels, createdAt } = req.body
+    const { name, price, _id, inStock, labels, createdAt, imgUrl } = req.body
     const toy = {
         _id,
         name,
         inStock,
         price: +price,
         labels: [...labels],
+        imgUrl
     }
+
     toyService.save(toy)
         .then((savedToy) => {
             res.send(savedToy)

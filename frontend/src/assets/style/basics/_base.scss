@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: NotoSans;
+    color: $clr1;
+    background-color:seashell;
+}
+
+h1 {
+    font-family: Signika;
+    margin: 0;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+

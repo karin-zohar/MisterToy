@@ -6,14 +6,22 @@
     width: max-content;
     white-space: nowrap;
     margin: 0.2em;
-}
 
-.label.inactive-label {
-    background-color: var(--inactive);
+    .toy-edit & {
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
+    }
+
+    &.inactive-label {
+        background-color: $inactive;
+    }
 }
 
 .on-wheels {
-    background-color:  #FF9C71;
+    background-color: #FF9C71;
 }
 
 .box-game {
@@ -45,6 +53,8 @@
     background-color: #FF75A0;
 }
 
+
+
 .label-container ul {
     display: flex;
     flex-wrap: wrap;
@@ -55,10 +65,10 @@
     width: 70vh;
 }
 
-.toy-edit .label {
-    cursor: pointer;
-}
+// .toy-edit .label {
+//     cursor: pointer;
+// }
 
-.toy-edit .label:hover {
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-}
+// .toy-edit .label:hover {
+//     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+// }

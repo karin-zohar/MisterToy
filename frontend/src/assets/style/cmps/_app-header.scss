@@ -1,0 +1,35 @@
+.app-header {
+    grid-template-rows: 1fr;
+    
+    a.active {
+        color: $clr2;
+    }
+    
+    > * {
+        align-self: center;
+        grid-row: 1;
+    }
+    nav {
+        display: flex;
+        justify-self: end;
+        
+        a {
+            font-family: Signika;
+            text-decoration: none;
+            margin-inline: 1em;
+            color: inherit;
+            transition: color 0.3s;
+    
+            &:hover {
+                color: darken($clr2, 20%);
+            }
+        }
+    }
+
+    .logo {
+        justify-self: start;
+    }
+}
+
+
+

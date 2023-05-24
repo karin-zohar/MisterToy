@@ -16,10 +16,8 @@ export const toyService = {
 }
 
 function query(filterBy = {}, sort = {}) {
-    console.log('filterBy: ', filterBy)
-    console.log('sort: ', sort)
     // return axios.get(BASE_URL).then(res => res.data)
-    return httpService.get(BASE_URL, { filterBy, sort })
+    return httpService.get(BASE_URL, { filterBy, sortBy: sort })
 }
 
 function getById(toyId) {
@@ -41,6 +39,7 @@ function getEmptyToy() {
         labels: [],
         createdAt: new Date(),
         inStock: true,
+        imgUrl: ''
     }
 }
 

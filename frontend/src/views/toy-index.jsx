@@ -34,7 +34,6 @@ export function ToyIndex() {
     }
 
     function onSetSort(sortToEdit) {
-        console.log('sortToEdit: ', sortToEdit)
         dispatch({ type: SET_SORT_BY, sortToEdit: { ...sortToEdit } })
     }
 
