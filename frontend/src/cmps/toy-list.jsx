@@ -5,13 +5,17 @@ export function ToyList({ toys, onRemoveToy }) {
     return (
         <section className="toy-list">
             <ul>
-                {toys.map(toy => 
+                {toys.map(toy =>
                     <li key={toy._id}>
-                        <ToyPreview toy={toy} />
-                        <div>
-                            <button onClick={() => onRemoveToy(toy._id)}>x</button>
-                            <button><Link to={`/toy/${toy._id}`} >Details</Link></button>
-                            <button><Link to={`/toy/edit/${toy._id}`} >Edit</Link></button>
+                        <Link to={`/toy/${toy._id}`}>
+                            <ToyPreview toy={toy} />
+                        </Link>
+                        <div className="preview-btns">
+                            <button onClick={() => onRemoveToy(toy._id)}>
+                                <span>X</span>
+                            </button>
+                            <button ><Link to={`/toy/${toy._id}`} >Details</Link></button>
+                            <button ><Link to={`/toy/edit/${toy._id}`} >Edit</Link></button>
                         </div>
 
                     </li>

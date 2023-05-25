@@ -9,7 +9,7 @@ export function ToyPreview({ toy }) {
     return (
         <section className="toy-preview">
             <h2>{toy.name}</h2>
-            <p>${price}</p>
+            <p className="price">${price}</p>
             <div className="img-wrapper">
                 <img src={toyImg} alt="toy" />
             </div>

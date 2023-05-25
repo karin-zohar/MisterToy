@@ -1,0 +1,41 @@
+.toy-list {
+    margin-top: 2em;
+
+    ul {
+        display: grid;
+        place-content: center;
+        gap: 30px;
+        grid-template-columns: repeat(auto-fit, calc(200px + 2em));
+        
+        li {
+            border: 2px solid $clr2;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 1em;
+        }
+    }
+
+    & .preview-btns {
+        margin-block-start: 0.5em;
+        display: flex;
+        justify-content: space-evenly;
+
+        >* {
+            color: $clr3;
+            background-color: $clr2;
+            padding: 0.5em;
+            border-radius: 10px;
+            border: none;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: lighten($clr2, 20%);
+            }
+        }
+
+        .delete::before {
+            content: '\e872';
+            color: inherit;
+        }
+    }
+}

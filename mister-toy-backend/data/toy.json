@@ -1,6 +1,97 @@
 [
   {
-    "name": "barbie",
+    "name": "Scrabble",
+    "price": 36,
+    "inStock": true,
+    "labels": [
+      "Box game"
+    ],
+    "createdAt": 1685024836041,
+    "imgUrl": "https://images.food52.com/mMvtRXE62XP07uKOUw_juk7f-ak=/2000x2000/9b376152-a500-407f-9be0-d786708925b3--2021-0813_gift-guide_unique-gifts_ws-game-company_luxury-scrabble_1x1_rocky-luten_068.jpg",
+    "_id": "zdnNM"
+  },
+  {
+    "name": "Royal Castle",
+    "price": 80,
+    "inStock": true,
+    "labels": [
+      "Box game"
+    ],
+    "createdAt": 1685024724166,
+    "imgUrl": "https://cdn.shopify.com/s/files/1/0373/7341/1467/products/TV256-My-First_Castle-Red-Wooden-Toy-Budkins.jpg?v=1657814245",
+    "_id": "xB4yW"
+  },
+  {
+    "name": "Lego Optimus Prime",
+    "price": 40,
+    "inStock": true,
+    "labels": [
+      "Doll",
+      "Battery Powered",
+      "On wheels"
+    ],
+    "createdAt": 1685024678872,
+    "imgUrl": "https://www.lego.com/cdn/cs/set/assets/blt6bbbc00338a87951/10302_boxprod_v39.jpg",
+    "_id": "prIX6"
+  },
+  {
+    "name": "Wonder Woman",
+    "price": 40,
+    "inStock": true,
+    "labels": [
+      "Doll"
+    ],
+    "createdAt": 1685024520613,
+    "imgUrl": "https://cdn11.bigcommerce.com/s-hlbgbzrg7y/images/stencil/1280x1280/products/1036/11054/Wonderwoman__03239.1683564427.jpg?c=1",
+    "_id": "hxKec"
+  },
+  {
+    "name": "Batman",
+    "price": 37,
+    "inStock": true,
+    "labels": [
+      "Doll"
+    ],
+    "createdAt": 1685024456061,
+    "imgUrl": "https://img2.americanoutlets.com/product/images/816/prod_e389ab4666d06ac4/4eba7e2d4b1681dee710eac73bb39800.jpeg",
+    "_id": "QqVkg"
+  },
+  {
+    "name": "Superman",
+    "price": 37,
+    "inStock": true,
+    "labels": [
+      "Doll"
+    ],
+    "createdAt": 1685024416531,
+    "imgUrl": "https://m.media-amazon.com/images/I/41KJTbe8waL.jpg",
+    "_id": "ySFiB"
+  },
+  {
+    "name": "Spiderman ",
+    "price": 37,
+    "inStock": true,
+    "labels": [
+      "Doll"
+    ],
+    "createdAt": 1685024376473,
+    "imgUrl": "https://m.media-amazon.com/images/I/71i9qpoBMeL._SL1500_.jpg",
+    "_id": "UvYQ8"
+  },
+  {
+    "name": "Baby Doll",
+    "price": 20,
+    "inStock": true,
+    "labels": [
+      "Doll",
+      "Baby"
+    ],
+    "createdAt": 1685022915053,
+    "imgUrl": "https://cdn.shopify.com/s/files/1/0513/3756/0260/products/bibi-doll-baby-doll-neon-pink-bibi-baby-doll-toy-with-dummy-sounds-36274171871454.jpg?v=1666749081",
+    "_id": "m4akp"
+  },
+  {
+    "name": "Barbie",
     "price": 555,
     "inStock": true,
     "labels": [
@@ -11,23 +102,14 @@
     "imgUrl": "https://www.rd.com/wp-content/uploads/2015/09/GettyImages-459000267-2-scaled.jpg"
   },
   {
-    "name": "Webkinz Puppy (pink)",
-    "price": 35,
-    "inStock": true,
-    "labels": [
-      "Doll",
-      "Battery Powered"
-    ],
-    "createdAt": 1684872894961,
-    "_id": "bcqlq",
-    "imgUrl": "https://www.forgetmenotkids.com/assets/images/webkinz/webkinz2/pinkpoodlelg.jpg"
-  },
-  {
     "name": "Playdough",
     "price": 31,
     "inStock": true,
     "labels": [
-      "Art"
+      "Art",
+      "Puzzle",
+      "Doll",
+      "Baby"
     ],
     "createdAt": 1684872846005,
     "_id": "e8IGX",
@@ -120,7 +202,7 @@
   },
   {
     "_id": "t101",
-    "name": "Not Talking Doll",
+    "name": "Porcelain Doll",
     "price": 1230,
     "labels": [
       "Doll",
