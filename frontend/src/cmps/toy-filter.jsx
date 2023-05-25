@@ -4,12 +4,12 @@ import { useEffect, useState } from 'react'
 import { toyService } from '../services/toy.service'
 import { utilService } from '../services/util.service'
 import { labelService } from '../services/label.sevice'
+import { MultipleSelectChip } from './mulit-select-chip'
 
-export function ToyFilter({ onSetFilter, onSetSort }) {
+export function ToyFilter({ onSetFilter, onSetSort, labels }) {
     const [filterByToEdit, setFilterByToEdit] = useState(toyService.getDefaultFilter())
     const [sortByToEdit, setSortByToEdit] = useState(toyService.getDefaultSort())
     const [maxPrice, setMaxPrice] = useState(500)
-    const [labels, setLabels] = useState([])
 
     const formattedPrice = utilService.padNum(maxPrice)
 
@@ -22,11 +22,6 @@ export function ToyFilter({ onSetFilter, onSetSort }) {
         onSetSort(sortByToEdit)
 
     }, [sortByToEdit])
-
-    useEffect(() => {
-        labelService.query()
-            .then(setLabels(labels))
-    }, [])
 
     function handleFilterChange({ target }) {
         let { value, name: field, type } = target
@@ -90,6 +85,11 @@ export function ToyFilter({ onSetFilter, onSetSort }) {
                     type="checkbox"
                     name="inStock"
                     onChange={handleFilterChange}
+                />
+
+                <MultipleSelectChip
+                    names={labels}
+                    handleFilterChange={handleFilterChange}
                 />
 
             </section>

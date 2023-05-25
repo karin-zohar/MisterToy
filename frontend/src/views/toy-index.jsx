@@ -6,6 +6,7 @@ import { loadToys, removeToy, saveToy } from '../store/toy.actions.js'
 import { ToyFilter } from "../cmps/toy-filter"
 import { ToyList } from '../cmps/toy-list'
 import { SET_FILTER_BY, SET_SORT_BY } from '../store/toy.reducer.js'
+import { labelService } from '../services/label.sevice.js'
 
 export function ToyIndex() {
     const dispatch = useDispatch()
@@ -13,10 +14,18 @@ export function ToyIndex() {
     const filterBy = useSelector((storeState) => storeState.toyModule.filterBy)
     const sortBy = useSelector((storeState) => storeState.toyModule.sortBy)
     const isLoading = useSelector((storeState) => storeState.toyModule.isLoading)
+    const [labels, setLabels] = useState([])
 
     useEffect(() => {
         loadToys(filterBy, sortBy)
     }, [filterBy, sortBy])
+
+    useEffect(() => {
+        labelService.query()
+            .then(labels => {
+                setLabels(labels)
+            })
+    }, [])
 
 
     function onRemoveToy(toyId) {
@@ -45,6 +54,7 @@ export function ToyIndex() {
                 <ToyFilter
                     onSetFilter={onSetFilter}
                     onSetSort={onSetSort}
+                    labels={labels}
                 />
                 <button>
                     <Link to={`/toy/edit`}>Add Toy</Link>

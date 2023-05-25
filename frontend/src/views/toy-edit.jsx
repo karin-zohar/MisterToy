@@ -12,7 +12,6 @@ export function ToyEdit() {
     const toyToEdit = useSelector((storeState) => storeState.toyModule.toys.find(toy => toy._id === params.toyId)) || toyService.getEmptyToy()
     const [updatedToy, setUpdatedToy] = useState(toyToEdit)
     const navigate = useNavigate()
-
     const [labels, setLabels] = useState([])
 
     useEffect(() => {

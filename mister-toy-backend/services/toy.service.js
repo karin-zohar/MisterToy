@@ -16,6 +16,11 @@ function query(filterBy = {}, sort = {}) {
         filteredToys = filteredToys.filter(toy => toy.inStock)
     }
 
+    if (filterBy.labels) {
+        filteredToys = filteredToys.filter(toy => toy.labels.some(toyLabel => filterBy.labels.includes(toyLabel)))
+        // filteredToys = filteredToys.filter(toy => toy.labels.some(toyLabel => filterBy.labels.include(toyLabel)))
+    }
+
     const { sortBy, desc } = sort
     if (sortBy === 'name') {
         filteredToys.sort((a, b) => desc * a.name.localeCompare(b.name))
