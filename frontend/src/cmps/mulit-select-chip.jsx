@@ -22,16 +22,16 @@ const MenuProps = {
 
 export function MultipleSelectChip({ names, handleFilterChange }) {
   
-  const [personName, setPersonName] = React.useState([]);
+  const [label, setLabel] = React.useState([]);
   
   useEffect(() => {
-    handleFilterChange({ target: { 'name': "labels", 'value': personName} })
-  }, [personName])
+    handleFilterChange({ target: { 'name': "labels", 'value': label} })
+  }, [label])
 
-  function getStyles(name, personName, theme) {
+  function getStyles(name, label, theme) {
     return {
       fontWeight:
-        personName.indexOf(name) === -1
+        label.indexOf(name) === -1
           ? theme.typography.fontWeightRegular
           : theme.typography.fontWeightMedium,
     };
@@ -47,7 +47,7 @@ export function MultipleSelectChip({ names, handleFilterChange }) {
     const {
       target: { value },
     } = event;
-    setPersonName(
+    setLabel(
       // On autofill we get a stringified value.
       typeof value === 'string' ? value.split(',') : value,
     );
@@ -61,7 +61,7 @@ export function MultipleSelectChip({ names, handleFilterChange }) {
           labelId="demo-multiple-chip-label"
           id="demo-multiple-chip"
           multiple
-          value={personName}
+          value={label}
           onChange={handleChange}
           input={<OutlinedInput id="select-multiple-chip" label="Chip" />}
           renderValue={(selected) => (
@@ -81,7 +81,7 @@ export function MultipleSelectChip({ names, handleFilterChange }) {
             <MenuItem
               key={name}
               value={name}
-              style={getStyles(name, personName, theme)}
+              style={getStyles(name, label, theme)}
 
             >
               {name}

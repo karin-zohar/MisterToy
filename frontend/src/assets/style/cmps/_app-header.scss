@@ -1,35 +1,74 @@
 .app-header {
     grid-template-rows: 1fr;
-    
-    a.active {
-        color: $clr2;
-    }
-    
-    > * {
+
+    >* {
         align-self: center;
         grid-row: 1;
     }
+    
     nav {
         display: flex;
         justify-self: end;
+        flex-direction: column;
         
+        @include for-normal-layout {
+            flex-direction: row;
+        }
+
+        &.menu-open {
+            a {
+                scale: 1;
+                margin-block:0.2em;
+                
+            }
+
+            .hamburger-btn::before {
+                content: '\2613'
+            }
+        }
+
         a {
             font-family: Signika;
             text-decoration: none;
             margin-inline: 1em;
             color: inherit;
             transition: color 0.3s;
-    
-            &:hover {
-                color: darken($clr2, 20%);
+            scale: 0;
+            
+
+            @include for-normal-layout {
+                scale: 1;
             }
         }
+
+        &.active {
+            color: $clr2;
+        }
+
+        &:hover {
+            color: darken($clr2, 20%);
+        }
+  
+        .hamburger-btn {
+            cursor: pointer;
+            font-size: 1.5em;
+            position:absolute;
+            align-self: end;
+            margin-block: 1em;
+
+            &::before {
+                content: '\2630'
+            }
+    
+            @include for-normal-layout {
+                display: none;
+            }
+        }
+    
     }
 
     .logo {
         justify-self: start;
     }
 }
-
-
 

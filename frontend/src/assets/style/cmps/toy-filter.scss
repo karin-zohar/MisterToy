@@ -1,0 +1,85 @@
+.toy-filter {
+    display: flex;
+    justify-content: space-between;
+
+    .sort {
+        display: flex;
+        height: 2em;
+
+        h4 {
+            white-space: nowrap;
+            color: darken($clr2, 20%);
+            margin: 0;
+            font-size: 1em;
+            align-self: center;
+            padding-inline-end: 1em;
+        }
+    }
+
+    .filter {
+        display: flex;
+        flex-wrap: wrap;
+        > * {
+            margin-inline: 1em;
+        }
+
+        input[type="search"] {
+            background-color: lighten($clr2, 30%);
+            border: none;
+            padding: 1em;
+            border-radius: 2em;
+            height: 3em;
+        }
+
+        .max-price-input {
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+
+            input[type="range"] {
+                -webkit-appearance: none;
+                appearance: none;
+                background: transparent;
+                cursor: pointer;
+                width: 15rem;
+                height: 10px;
+                overflow: hidden;
+                border-radius: 2em;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    @include slider-thumb;
+                }
+
+                &::-webkit-slider-runnable-track {
+                    @include slider-track
+                }
+
+                &::-moz-range-thumb {
+                    @include slider-thumb;
+                    outline: none;
+                }
+
+                &::-moz-range-track {
+                    @include slider-track
+                }
+            }
+
+            label {
+                color: darken($clr2, 20%);
+            }
+        }
+
+        .labels-select {
+            &:focus {
+                outline-color: $clr2;
+            }
+        }
+
+
+    }
+}

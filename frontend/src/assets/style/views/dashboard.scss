@@ -1,0 +1,19 @@
+.dashboard {
+    h1 {
+        text-align: center;
+        font-size: 2em;
+        margin: 2em;
+    }
+    .charts {
+        margin-block-start: 5em;
+        display: grid;
+        place-content: center;
+        gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(auto, calc(500px + 2em)));
+
+        div {
+            max-width: 500px;
+            min-width: 300px;
+        }
+    }
+}

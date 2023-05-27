@@ -1,6 +1,7 @@
 /* Setup */
 @import './setup/_variables';
 @import './setup/_typography';
+@import './setup/mixins';
 
 
 
@@ -12,7 +13,9 @@
 
 /* Views */
 @import './views/_home-page';
+@import './views/toy-index.scss';
 @import './views/toy-detail';
+@import './views/dashboard.scss';
 
 /* Cmps */
 @import './cmps/_app-header';
@@ -21,3 +24,4 @@
 @import './cmps/_label';
 @import './cmps/_toy-preview';
 @import './cmps/toy-list';
+@import './cmps/toy-filter';

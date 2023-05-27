@@ -13,7 +13,7 @@
   {
     "name": "Royal Castle",
     "price": 80,
-    "inStock": true,
+    "inStock": false,
     "labels": [
       "Box game"
     ],
@@ -37,7 +37,7 @@
   {
     "name": "Wonder Woman",
     "price": 40,
-    "inStock": true,
+    "inStock": false,
     "labels": [
       "Doll"
     ],
@@ -70,7 +70,7 @@
   {
     "name": "Spiderman ",
     "price": 37,
-    "inStock": true,
+    "inStock": false,
     "labels": [
       "Doll"
     ],
@@ -191,7 +191,7 @@
   {
     "name": "5,000 Pieces Puzzle",
     "price": 150,
-    "inStock": true,
+    "inStock": false,
     "labels": [
       "Puzzle",
       "Box game"

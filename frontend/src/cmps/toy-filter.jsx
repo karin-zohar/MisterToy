@@ -67,31 +67,37 @@ export function ToyFilter({ onSetFilter, onSetSort, labels }) {
                     placeholder="Search toys"
                     onChange={handleFilterChange}
                 />
-                <label htmlFor="price">Max price: ${formattedPrice}</label>
-                <input
-                    type="range"
-                    id="price"
-                    name="price"
-                    min="0"
-                    max="2000"
-                    onChange={(event) => {
-                        handleFilterChange(event)
-                        setRangeLabel(event)
-                    }}
-                />
 
-                <label htmlFor="inStock">In stock</label>
-                <input
-                    type="checkbox"
-                    name="inStock"
-                    onChange={handleFilterChange}
-                />
+                <div className='max-price-input'>
+                    <label htmlFor="price">Max price: ${formattedPrice}</label>
+                    <input
+                        type="range"
+                        id="price"
+                        name="price"
+                        min="0"
+                        max="2000"
+                        onChange={(event) => {
+                            handleFilterChange(event)
+                            setRangeLabel(event)
+                        }}
+                    />
+                </div>
+
 
                 <MultipleSelectChip
+                    className="labels-select"
                     names={labels}
                     handleFilterChange={handleFilterChange}
                 />
 
+                <label htmlFor="inStock">
+                    <input
+                        type="checkbox"
+                        name="inStock"
+                        onChange={handleFilterChange}
+                    />
+                    In stock
+                </label>
             </section>
 
 
